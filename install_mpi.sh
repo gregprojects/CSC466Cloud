@@ -8,8 +8,6 @@ sudo ./configure --prefix=/software/openmpi/3.1.2 --enable-orterun-prefix-by-def
 sudo make
 sudo make all install
 
-sudo mkdir -p /software/openmpi
-
 while IFS= read -r line; do
   echo 'export PATH=$PATH:/software/openmpi/3.1.2/bin' | sudo tee -a /users/$i/.bashrc
   echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/software/openmpi/3.1.2/lib/' | sudo tee -a /users/$i/.bashrc
